@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email template</title>
+
+    <!-- begin styles -->
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --gray-bg-color: #f3f4f5;
+            --dark-blue: #032b4e;
+            --semi-dark-blue: #cfe1fa;
+            --light-blue: #ebf6fb;
+
+            --text: #010b14;
+            --text-blue: #06345c;
+        }
+
+        *, *::before, *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: var(--gray-bg-color);
+            color: var(--text);
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        .container {
+            background: var(--bg-color);
+            display:  flex;
+            flex-direction: column;
+            width: 55%;
+            height: 100%;
+            min-height: 100vh;
+            margin-inline: auto;
+        }
+
+        .section {
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .text-bold {
+            font-weight: 700;
+        }
+
+        .text-semi-bold {
+            font-weight: 500;
+        }
+
+        .section__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading-wraper {
+            background: var(--semi-dark-blue);
+        }
+
+        .section__heading-text {
+            max-width: 80%;
+            margin-inline: auto;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .section__greeting-paragraphe {
+            line-height: 1.5
+        }
+
+        .comprehension-message {
+            background: var(--light-blue);
+        }
+
+        .section__comprehension-message-text {
+            text-align: center;
+            color: var(--text-blue);
+        }
+
+        .section__invoice-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section__invoice-wrapper__cta-btn {
+            padding: 1rem 1.5rem;
+            border-radius: 7px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            border: none;
+            background: var(--dark-blue);
+        }
+
+        .invoice-acknowledgement__notice {
+            line-height: 1.5
+        }
+
+        .invoice-acknowledgement__thank-you-message {
+            margin-top: 2.5rem;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            background: var(--semi-dark-blue);
+        }
+
+        .section__footer-social-media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section__footer-social-media__quote {
+            text-align: center;
+            font-size: .85rem;
+        }
+        
+        .section__footer-social-media__follow-us-text {
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-blue);
+            font-size: .85rem;
+        }
+
+        .section__footer-social-media__links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .section__footer-social-media__links__url {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.1rem;
+            height: 2.1rem;
+            border-radius: 50px;
+        }
+
+        .section__footer-social-media__links__url.linkedin {
+            background: #0077B5;
+        }
+
+        .section__footer-social-media__links__url.twitter {
+            background: #00070a;
+        }
+
+        .section__footer-social-media__links__url.linkedin img, .section__footer-social-media__links__url.twitter img {
+            filter: invert(100%);
+            width: 50%;
+            height: 50%;
+            pointer-events: none;
+        }
+
+        .section__footer-copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .section__footer-copyright__text {
+            font-size: .7rem;
+            text-align: center;
+        }
+
+        .section__footer-copyright__unsubscribe-link {
+            text-align: center;
+            font-size: .7rem;
+            color: var(--text);
+            text-decoration: none;
+            opacity: .7;
+        }
+    </style>
+    <!-- end styles -->
+    
+</head>
+
+<body>
+    <main class="container">
+        <!-- logo wrapper -->
+        <section class="section">
+            <div class="section__logo">
+                <a href="https://www.alterna-energie.fr/" target="_blank" rel="noopener noreferrer">
+                    <img
+                        src="./assets/./logo.png"
+                        alt="groupe sorégies | énergies vienne"
+                        class="section__logo__img"
+                    >
+                </a>
+            </div>
+        </section>
+
+        <!-- logo wrapper -->
+        <section class="section heading-wraper">
+            <h1 class="section__heading-text">Découvrez votre facture d'électricité expliquée en vidéo</h1>
+        </section>
+
+        <!-- greeting -->
+        <section class="section">
+            <p class="section__greeting-paragraphe text-semi-bold">
+                Chère client(e), <br>
+                Nous avons pleinement conscience que les factures et tout le détail qu'elles comportent
+                sont parfois complexes à comprendre.
+            </p>
+        </section>
+
+        <!-- comprehension-message -->
+        <section class="section comprehension-message">
+            <p class="section__comprehension-message-text text-bold">
+                C'est pourquoi, pour une meilleure compréhension nous vous proposons de découvrir votre facture, éditée ce jour, expliquée en vidéo
+            </p>
+        </section>
+
+        <!-- invoice-information -->
+        <section class="section">
+            <div class="section__invoice-wrapper">
+                <a href="http://" class="section__invoice-wrapper__cta-btn">
+                    Accéder à la vidéo de ma facture
+                </a>
+
+                <div class="invoice-acknowledgement">
+                    <p class="invoice-acknowledgement__notice text-semi-bold"><b>Il s'agit de votre véritable facture</b>, que vous pouvez retrouver dans votre espace client ou que vous allez recevoir sous quelques jours dans votre boîte aux lettres suivant vos habitudes.
+                    </p>
+
+                    <p class="invoice-acknowledgement__thank-you-message text-semi-bold">
+                        Merci de votre confiance et de votre fidélité à SORÉGIES.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="section footer">
+            <div class="section__footer-social-media">
+                <p class="section__footer-social-media__quote text-semi-bold"><i>L'énergie est notre avenir, économisons-la !</i></p>
+                <p class="section__footer-social-media__follow-us-text">Suivez nous sur</p>
+                <div class="section__footer-social-media__links">
+                    <!-- linkedin -->
+                    <a href="" class="section__footer-social-media__links__url linkedin">
+                        <img src="./assets/linkedin.png" alt="Linkedin">
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="" class="section__footer-social-media__links__url twitter">
+                        <img src="./assets/twitter.png" alt="X">
+                    </a>
+                </div>
+            </div>
+
+            <!-- copyright -->
+            <div class="section__footer-copyright">
+                <p class="section__footer-copyright__text">
+                    SOREGIES, Société Anonyme d&apos;Economie Mixte Locale à Directoire et Conseil de surveillance immatriculée au  RCS de Poitiers <br> <br> sous le n° 450 889 225, au capital de 25.726.600 euros, dont le siège social est situé au 78 avenue Jacques Cœur Poitiers
+                </p>
+
+                <a href="" class="section__footer-copyright__unsubscribe-link">Se désinscrire</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
